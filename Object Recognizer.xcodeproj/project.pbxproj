@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5EF1246A28A83C640056548D /* Object_RecognizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF1246928A83C640056548D /* Object_RecognizerApp.swift */; };
-		5EF1246C28A83C640056548D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF1246B28A83C640056548D /* ContentView.swift */; };
 		5EF1246E28A83C650056548D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF1246D28A83C650056548D /* Assets.xcassets */; };
 		5EF1247128A83C650056548D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF1247028A83C650056548D /* Preview Assets.xcassets */; };
 		5EF1247B28A83C650056548D /* Object_RecognizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF1247A28A83C650056548D /* Object_RecognizerTests.swift */; };
 		5EF1248528A83C650056548D /* Object_RecognizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF1248428A83C650056548D /* Object_RecognizerUITests.swift */; };
 		5EF1248728A83C650056548D /* Object_RecognizerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF1248628A83C650056548D /* Object_RecognizerUITestsLaunchTests.swift */; };
+		5EF1249728A83CDA0056548D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF1249628A83CDA0056548D /* ContentView.swift */; };
+		5EF1249928A83CF30056548D /* CatOrDog.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5EF1249828A83CF30056548D /* CatOrDog.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		5EF1246628A83C640056548D /* Object Recognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Object Recognizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF1246928A83C640056548D /* Object_RecognizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object_RecognizerApp.swift; sourceTree = "<group>"; };
-		5EF1246B28A83C640056548D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5EF1246D28A83C650056548D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EF1247028A83C650056548D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5EF1247628A83C650056548D /* Object RecognizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Object RecognizerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +44,8 @@
 		5EF1248028A83C650056548D /* Object RecognizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Object RecognizerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF1248428A83C650056548D /* Object_RecognizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object_RecognizerUITests.swift; sourceTree = "<group>"; };
 		5EF1248628A83C650056548D /* Object_RecognizerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object_RecognizerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5EF1249628A83CDA0056548D /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5EF1249828A83CF30056548D /* CatOrDog.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CatOrDog.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				5EF1246828A83C640056548D /* Object Recognizer */,
+				5EF1249528A83C9A0056548D /* Models */,
 				5EF1247928A83C650056548D /* Object RecognizerTests */,
 				5EF1248328A83C650056548D /* Object RecognizerUITests */,
 				5EF1246728A83C640056548D /* Products */,
@@ -95,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				5EF1246928A83C640056548D /* Object_RecognizerApp.swift */,
-				5EF1246B28A83C640056548D /* ContentView.swift */,
+				5EF1249628A83CDA0056548D /* ContentView.swift */,
 				5EF1246D28A83C650056548D /* Assets.xcassets */,
 				5EF1246F28A83C650056548D /* Preview Content */,
 			);
@@ -125,6 +128,14 @@
 				5EF1248628A83C650056548D /* Object_RecognizerUITestsLaunchTests.swift */,
 			);
 			path = "Object RecognizerUITests";
+			sourceTree = "<group>";
+		};
+		5EF1249528A83C9A0056548D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5EF1249828A83CF30056548D /* CatOrDog.mlmodel */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EF1246C28A83C640056548D /* ContentView.swift in Sources */,
+				5EF1249928A83CF30056548D /* CatOrDog.mlmodel in Sources */,
+				5EF1249728A83CDA0056548D /* ContentView.swift in Sources */,
 				5EF1246A28A83C640056548D /* Object_RecognizerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
