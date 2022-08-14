@@ -5,12 +5,15 @@
 //
 
 import SwiftUI
+import CoreML
+import Vision
 
 struct ContentView: View
 {
     @State private var image: Image?
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
+    @State private var predictionText = ""
     
     var body: some View
     {
@@ -18,7 +21,7 @@ struct ContentView: View
         {
             VStack
             {
-                Text("Hello World")
+                Text(predictionText)
                 VStack
                 {
                     ZStack
@@ -46,13 +49,30 @@ struct ContentView: View
     func selectImage()
     {
         showingImagePicker = true
-        
     }
     
     func loadImage()
     {
         guard let inputImage = inputImage else {return}
         image = Image(uiImage: inputImage)
+        
+        classifiyImage()
+    }
+    
+    func classifiyImage()
+    {
+        do
+        {
+            let config = MLModelConfiguration()
+            let model = try CatOrDogClassifier(configuration: config)
+            let resizedImage = inputImage!.resizeImageTo(size: CGSize(width: 299, height: 299))
+            let convertedImage = resizedImage?.convertToBuffer()
+            predictionText = try model.prediction(image: convertedImage!).classLabel
+        }
+        catch
+        {
+            predictionText = "Failed to load model"
+        }
     }
 }
 
