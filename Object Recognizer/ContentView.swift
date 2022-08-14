@@ -21,7 +21,7 @@ struct ContentView: View
         {
             VStack
             {
-                Text(predictionText)
+                Text(predictionText).font(.headline)
                 VStack
                 {
                     ZStack
@@ -67,7 +67,10 @@ struct ContentView: View
             let model = try CatOrDogClassifier(configuration: config)
             let resizedImage = inputImage!.resizeImageTo(size: CGSize(width: 299, height: 299))
             let convertedImage = resizedImage?.convertToBuffer()
-            predictionText = try model.prediction(image: convertedImage!).classLabel
+            let prediction = try model.prediction(image: convertedImage!)
+            let predictionClass = prediction.classLabel
+            let confidence = String(format: "%.2f", prediction.classLabelProbs[predictionClass]! * 100)
+            predictionText = predictionClass + ": " + confidence + "%"
         }
         catch
         {

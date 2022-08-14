@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EBDCAC928A958F900831715 /* CatOrDogClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDCAC828A958F900831715 /* CatOrDogClassifier.mlmodel */; };
 		5EF1246A28A83C640056548D /* Object_RecognizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF1246928A83C640056548D /* Object_RecognizerApp.swift */; };
 		5EF1246E28A83C650056548D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF1246D28A83C650056548D /* Assets.xcassets */; };
 		5EF1247128A83C650056548D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF1247028A83C650056548D /* Preview Assets.xcassets */; };
@@ -17,7 +18,6 @@
 		5EF1249D28A83DBE0056548D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF1249C28A83DBE0056548D /* ImagePicker.swift */; };
 		5EF124A328A84DA30056548D /* ImageConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF124A228A84DA30056548D /* ImageConverter.swift */; };
 		5EF124A728A890330056548D /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5EF124A628A890330056548D /* MobileNet.mlmodel */; };
-		5EF124AB28A8988A0056548D /* CatOrDogClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5EF124AA28A8988A0056548D /* CatOrDogClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5EBDCAC828A958F900831715 /* CatOrDogClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CatOrDogClassifier.mlmodel; sourceTree = "<group>"; };
 		5EF1246628A83C640056548D /* Object Recognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Object Recognizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF1246928A83C640056548D /* Object_RecognizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object_RecognizerApp.swift; sourceTree = "<group>"; };
 		5EF1246D28A83C650056548D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		5EF1249C28A83DBE0056548D /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		5EF124A228A84DA30056548D /* ImageConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConverter.swift; sourceTree = "<group>"; };
 		5EF124A628A890330056548D /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
-		5EF124AA28A8988A0056548D /* CatOrDogClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CatOrDogClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +141,7 @@
 		5EF1249528A83C9A0056548D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5EF124AA28A8988A0056548D /* CatOrDogClassifier.mlmodel */,
+				5EBDCAC828A958F900831715 /* CatOrDogClassifier.mlmodel */,
 				5EF124A628A890330056548D /* MobileNet.mlmodel */,
 			);
 			path = Models;
@@ -277,7 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EF124AB28A8988A0056548D /* CatOrDogClassifier.mlmodel in Sources */,
+				5EBDCAC928A958F900831715 /* CatOrDogClassifier.mlmodel in Sources */,
 				5EF1249D28A83DBE0056548D /* ImagePicker.swift in Sources */,
 				5EF124A328A84DA30056548D /* ImageConverter.swift in Sources */,
 				5EF124A728A890330056548D /* MobileNet.mlmodel in Sources */,
